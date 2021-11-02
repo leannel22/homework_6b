@@ -1,2 +1,2 @@
-# homework_6b
-Part two of homework 6.
+# homework_6a
+Bun Bun Bakery website prototype with some Javascript added

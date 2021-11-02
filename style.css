@@ -1,0 +1,322 @@
+/* You can use element, id, or class selectors to create your styles */
+
+/* 🌱 Body and main content */
+body{
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-bottom: 2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px; /* or 160% */
+    letter-spacing: 0.03em;
+  }
+
+img {
+    align-self: center;
+    width: 100%;
+    height: auto;
+}
+
+.img-smaller {
+    align-self: center;
+    width: 70%;
+    height: auto;
+}
+
+.img-thumb {
+    align-self: center;
+    width: 70%;
+    height: auto;
+}
+
+.img-cart {
+    align-self: center;
+    width: 25%;
+    height: auto;
+}
+
+hr {
+    margin: 3rem 0rem;
+    background-color: #909090;
+    height: 1px;
+}
+
+
+/* 📘 Typography */
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 72px;
+    /* identical to box height */
+    letter-spacing: 0.03em;
+}
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 48px;
+    /* identical to box height */
+    letter-spacing: 0.03em;
+}
+
+a {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #909090;
+}
+
+/* selected link */
+a:active {
+    color: #E18580;
+}
+
+.a-logo
+{
+    margin-left: 0px;
+}
+
+.body-bold { 
+    font-weight:bold;
+    margin-bottom: 8px;
+}
+
+.secondary {
+    color: #909090;
+}
+
+.link {
+    color:#E18580;
+}
+
+.dropdown-label {
+    font-family: "Poppins", sans-serif;
+    color: #909090;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.03em;
+    margin: 0px;
+}
+
+
+/* 🍡 UI elements */
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 20px;
+    margin-right: 100px;
+    cursor: pointer;
+
+    background: #E18580;
+    border-radius: 8px;
+
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 38px;
+    /* identical to box height, or 160% */
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.input {
+    margin-top: 1em;
+}
+
+.bubble-button {
+    border-radius: 100%;
+    padding: 0.5em 0.75em;
+}
+
+.dropdown-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 4px 8px;
+    border-radius: 8px;
+    border-color: #909090;
+    cursor: pointer;
+    width: 20%;
+    text-align: left;
+    /* margin-top: 1.5em; */
+
+    display: flex;
+    justify-content: space-between;
+
+    /* Font */
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px; /* or 160% */
+    letter-spacing: 0.03em;
+}
+
+.dropdown-button:hover{
+    color: #909090;
+}
+
+/* Hide dropdown list */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f4f4f4;
+    border-radius: 0px 0px 8px 8px;
+}
+
+/* Position dropdown when showing */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Show dropdown list */
+.show {display:block;}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #E18580;
+}
+
+/* Free text entry */
+.text-area-format {
+    border-color: #909090;
+    border-radius: 8px;
+    padding: 4px 8px;
+    border-width: 2px;
+
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px; /* or 160% */
+    letter-spacing: 0.03em;
+}
+
+
+/* Specific dropdown IDs */
+#glaze_dropdown {
+    width: 16em;
+}
+
+#count_dropdown {
+    width: 10em;
+}
+
+#add-cart-button {
+    /* float: right; */
+    margin-right: 0px;
+}
+
+/* 🦸‍♀️ Hero banner */
+#hero-banner {
+    background-image: url(images/Hero\ banner.png);
+    background-color: #f4f4f4;
+    min-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right-side {
+    float: right;
+    width: 40%;
+}
+
+/* 🧭Navigation bar */
+.nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1em;
+}
+
+.logo {
+    max-width: 64px;
+    padding: 1em;
+}
+
+.icon {
+    max-width: 24px;
+}
+
+.icon-smaller {
+    max-width: 16px;
+}
+
+.nav-tab {
+    justify-content: space-between;
+    flex-direction: row;
+    padding-right: 3em;
+}
+
+.nav-tab-active {
+    color:#E18580
+}
+
+
+/* 🍱 Spacing and layout */
+.flex-container {
+    padding-top: 3rem;
+    display: flex;
+    width: 100%;
+}
+
+.flex-container-nomargin {
+    display: flex;
+    align-items: center;
+}
+
+.flex-item {
+    margin-right: 3rem;
+    padding-bottom: 3rem;
+    padding-right: 0rem;
+}
+
+.flex-item-nobottom {
+    padding-right: 3rem;
+    
+}
+
+.inline-images {
+    margin-right: 3rem;
+}
+
+:disabled {
+    background-color: #909090;
+}
