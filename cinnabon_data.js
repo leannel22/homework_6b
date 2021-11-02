@@ -2,31 +2,31 @@ var cinnabons = {
     "original": {
         name: "Original", 
         photo: "images/Menu/original.png", 
-        ingredients:"og"
+        ingredients: "Milk, All-purpose flour, Butter, Brown sugar, Ground Cinnamon, Cream cheese, Vanilla Extract"
     },
     "blackberry": {
         name: "Blackberry", 
         photo: "images/Menu/blackberry.png", 
-        ingredients:"og"
+        ingredients: "Blackberries, Milk, All-purpose flour, Butter, Brown sugar, Ground Cinnamon, Cream cheese, Vanilla Extract"
     },
     "caramel_pecan": {
         name: "Caramel Pecan", 
         photo: "images/Menu/caramel_pecan.png", 
-        ingredients:"og"
+        ingredients: "Caramel, Pecan nuts, Milk, All-purpose flour, Butter, Brown sugar, Ground Cinnamon, Cream cheese, Vanilla Extract"
     },
     "walnut": {
         name: "Walnut", 
         photo: "images/Menu/walnut.png", 
-        ingredients:"og"
+        ingredients: "Walnuts, Milk, All-purpose flour, Butter, Brown sugar, Ground Cinnamon, Cream cheese, Vanilla Extract"
     },
     "gluten_free": {
         name: "Gluten Free", 
         photo: "images/Menu/gluten_free.png", 
-        ingredients:"og"
+        ingredients: "Milk, All-purpose gluten-free flour, Butter, Brown sugar, Ground Cinnamon, Cream cheese, Vanilla Extract"
     },
     "pumpkin_spice": {
         name: "Pumpkin Spice", 
         photo: "images/Menu/pumpkin_spice.png", 
-        ingredients:"og"
+        ingredients: "Pumpkin, Nutmeg, Milk, All-purpose flour, Butter, Brown sugar, Ground Cinnamon, Cream cheese, Vanilla Extract"
     },
 }
