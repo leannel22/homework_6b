@@ -35,6 +35,11 @@ img {
     height: auto;
 }
 
+.img-top {
+    width: 70%;
+    height: auto;
+}
+
 .img-cart {
     align-self: center;
     width: 25%;
@@ -42,7 +47,7 @@ img {
 }
 
 hr {
-    margin: 3rem 0rem;
+    margin: 1.5rem 0rem;
     background-color: #909090;
     height: 1px;
 }
@@ -150,68 +155,6 @@ a:active {
     margin-top: 1em;
 }
 
-.bubble-button {
-    border-radius: 100%;
-    padding: 0.5em 0.75em;
-}
-
-.dropdown-button {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 4px 8px;
-    border-radius: 8px;
-    border-color: #909090;
-    cursor: pointer;
-    width: 20%;
-    text-align: left;
-    /* margin-top: 1.5em; */
-
-    display: flex;
-    justify-content: space-between;
-
-    /* Font */
-    font-family: "Poppins", sans-serif;
-    color: #000000;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 26px; /* or 160% */
-    letter-spacing: 0.03em;
-}
-
-.dropdown-button:hover{
-    color: #909090;
-}
-
-/* Hide dropdown list */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f4f4f4;
-    border-radius: 0px 0px 8px 8px;
-}
-
-/* Position dropdown when showing */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Show dropdown list */
-.show {display:block;}
-
-/* Dropdown links */
-.dropdown-content a {
-    color: black;
-    padding: 8px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    color: #E18580;
-}
-
 /* Free text entry */
 .text-area-format {
     border-color: #909090;
@@ -227,16 +170,21 @@ a:active {
     letter-spacing: 0.03em;
 }
 
+select {
+    border-color: #909090;
+    border-radius: 8px;
+    padding: 4px 8px;
+    border-width: 2px;
+
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px; /* or 160% */
+    letter-spacing: 0.03em;
+}
 
 /* Specific dropdown IDs */
-#glaze_dropdown {
-    width: 16em;
-}
-
-#count_dropdown {
-    width: 10em;
-}
-
 #add-cart-button {
     /* float: right; */
     margin-right: 0px;

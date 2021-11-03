@@ -16,7 +16,7 @@ var cinnabons = {
     },
     "walnut": {
         name: "Walnut", 
-        photo: "images/Menu/blackberry.png", 
+        photo: "images/Menu/walnut.png", 
         ingredients: "Walnuts, Milk, All-purpose flour, Butter, Brown sugar, Ground Cinnamon, Cream cheese, Vanilla Extract"
     },
     "gluten_free": {

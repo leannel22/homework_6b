@@ -2,8 +2,8 @@
 
 // When you click Add to Cart
 function updateCartMessage()  {
-    // document.getElementById("cartMessage").textContent = "Item has been added to cart!🧁";
-    // document.getElementById("cartCount").textContent = "Updated: 3 total items";
+    document.getElementById("cartMessage").textContent = "Item has been added to cart!🧁";
+
     let glaze = document.getElementById("glaze_options").value;
     let count = 0;
 
@@ -29,7 +29,7 @@ function updateCartMessage()  {
     // Update cart
     cart.push(cart_item);
 
-    // Step 3
+    // Put it into string and set to localStorage
     cart = JSON.stringify(cart);
     localStorage.setItem("shopping_cart",cart);
 }
@@ -44,6 +44,7 @@ function load_details() {
     let bun_temp = localStorage.getItem("bun");
     document.getElementById("prod_name").innerHTML = `${cinnabons[bun_temp]["name"]} Cinnamon Roll`
     document.getElementById("prod_img").src = `${cinnabons[bun_temp]["photo"]}`
+    document.getElementById("prod_ingr").innerHTML = `${cinnabons[bun_temp]["ingredients"]}`
     // `` Back ticks will allow JS to put variables in HTML
 }
 
@@ -77,7 +78,7 @@ function loadCart() {
                     <p class="flex-item-nobottom secondary">${elem.count} rolls</p>
                     <div class="flex-container-nomargin">
                         <p class="flex-item link">✏️Edit</p>
-                        <p class="flex-item link">🗑Remove</p>
+                        <p class="flex-item link" onclick="remove_item()">🗑Remove</p>
                     </div>
                 </div> 
             </div>
@@ -87,5 +88,12 @@ function loadCart() {
     }
     document.getElementById("allCartItems").insertAdjacentHTML("beforeend", allCartItems);
     // console.log(allCartItems);
-    // document.getElementById('nameofid').remove()
+}
+
+function remove_item(){
+    document.getElementById('cartIndex').remove();
+}
+
+function totalItemCount(){
+    document.getElementById("totalItemCount").textContent = "items in cart🧁";
 }
