@@ -91,6 +91,18 @@ function loadCart() {
 }
 
 function remove_item(){
+    
+    // UNDER CONSTRUCTION
+    // Parse cart
+    let cart = localStorage.getItem("shopping_cart");
+    cart = JSON.parse(cart);
+    // Update cart
+    cart.push(cart_item);
+    // Put it into string and set to localStorage
+    cart = JSON.stringify(cart);
+    localStorage.setItem("shopping_cart",cart);
+
+    // Update HTML
     document.getElementById('cartIndex').remove();
 }
 
