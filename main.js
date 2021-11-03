@@ -1,35 +1,5 @@
 // 🧁 Cinnamon roll constructors
 
-// Trying to make a backend JSON data storage
-function onClick () {
-    const productString = JSON.stringify(product);
-    console.log(productString);
-    localStorage.setItem("prod",productString);
-    localStorage.getItem("prod");
-    document.getElementById("glaze_dropdown").textContent = "test";
-}
-
-// Individual functions for each dropdown option (will be optimized in the future)
-function selectSMGlaze () {
-    document.getElementById("glaze_dropdown").textContent = "Sugar-milk glaze";
-    showDropdownContents();
-}
-
-function selectVMGlaze () {
-    document.getElementById("glaze_dropdown").textContent = "Vanilla-milk glaze";
-    showDropdownContents();
-}
-
-function selectDCGlaze () {
-    document.getElementById("glaze_dropdown").textContent = "Double-chocolate glaze";
-    showDropdownContents();
-}
-
-function selectNoGlaze () {
-    document.getElementById("glaze_dropdown").textContent = "None";
-    showDropdownContents();
-}
-
 // When you click Add to Cart
 function updateCartMessage()  {
     // document.getElementById("cartMessage").textContent = "Item has been added to cart!🧁";
