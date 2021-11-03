@@ -16,7 +16,7 @@ var cinnabons = {
     },
     "walnut": {
         name: "Walnut", 
-        photo: "images/Menu/walnut.png", 
+        photo: "images/Menu/blackberry.png", 
         ingredients: "Walnuts, Milk, All-purpose flour, Butter, Brown sugar, Ground Cinnamon, Cream cheese, Vanilla Extract"
     },
     "gluten_free": {
@@ -30,3 +30,14 @@ var cinnabons = {
         ingredients: "Pumpkin, Nutmeg, Milk, All-purpose flour, Butter, Brown sugar, Ground Cinnamon, Cream cheese, Vanilla Extract"
     },
 }
+
+// Data structure = type of data that holds multiple values
+// Consistent regimen dpends on how we structure ^
+// Add to Cart --> need 4 pieces of info. They will be same (repetitive). Need labels for the 4 values. 
+// "Labels for consistent values" =  need object!
+// Object keys will always be name glaze quantity image and values will be different
+
+// 1 cart item
+// let aCartItem = {name:"original", quantity: 1, glaze: "sugar-milk", photo:"images/Menu/original.png"}
+// let shoppingCart = [aCartItem, bCartItem]
+// Set variable, put in localStorage

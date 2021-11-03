@@ -33,7 +33,7 @@
 
         <!-- Menu item header and price -->
         <div class="flex-container-nomargin">
-            <h2 id="prod_name" class="flex-item-nobottom">Oz</h2> 
+            <h2 id="prod_name" class="flex-item-nobottom">Placeholder</h2> 
             <h2 class="flex-item-nobottom secondary">$5.00</h2>
         </div> 
 
@@ -50,12 +50,20 @@
                 <button id="glaze_dropdown" class="dropdown-button" onclick="showDropdownContents()">Select glaze
                     <img class="icon-smaller" src="images/Icon/dropdown_arrow.svg" alt="Dropdown icon.">
                 </button>
-                <div id="glaze_options" class="dropdown-content">
+                <!-- <div id="glaze_options" class="dropdown-content">
                     <a onclick="selectSMGlaze()">Sugar-milk glaze</a>
                     <a onclick="selectVMGlaze()">Vanilla-milk glaze</a>
                     <a onclick="selectDCGlaze()">Double-chocolate glaze</a>
                     <a onclick="selectNoGlaze()">None</a>
-                </div>
+                </div> -->
+            </div>
+            <div>
+                <select id="glaze_options">
+                    <option>None</option>
+                    <option>Sugar Milk</option>
+                    <option>Vanilla Milk</option>
+                    <option>Double Chocolate</option>                    
+                </select>
             </div>
 
             <div class="input">

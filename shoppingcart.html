@@ -5,10 +5,10 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
         <link rel="stylesheet" type="text/css" href="style.css"/>
         <script src="main.js" type="text/javascript"></script>
-        <title> Bun Bun Bakery | Menu </title>
+        <title> Bun Bun Bakery | Shopping Cart </title>
     </head>
 
-    <body class="section">
+    <body class="section" onload="loadCart()">
 
         <!-- 🧭Navigation bar -->
         <div class="nav">
@@ -31,49 +31,8 @@
 
 
         <!-- 🧁 Item list -->
-        <div>
+        <div id="allCartItems">
             <!-- 🧁 One item -->
-            <a href="product_details.html">
-                <div class="flex-container-nomargin">
-                    <img class="flex-item img-cart" src="images/Menu/original.png" alt="Original flavor cinnamon roll photo.">
-                    <div>
-                        <p class="flex-item-nobottom body-bold">Original</p> 
-                        <p class="flex-item-nobottom secondary">Sugar-milk glaze</p>
-                        <p class="flex-item-nobottom secondary">$5.00</p>
-                        <p class="flex-item-nobottom secondary">1 roll</p>
-                        <div class="flex-container-nomargin">
-                            <p class="flex-item link">✏️Edit</p>
-                            <p class="flex-item link">🗑Remove</p>
-                        </div>
-                    </div> 
-                </div>
-            </a>
-            <div class="flex-container-nomargin">
-                <img class="flex-item img-cart" src="images/Menu/blackberry.png" alt="Blackberry flavor cinnamon roll photo.">
-                <div>
-                    <p class="flex-item-nobottom body-bold">Blackberry</p> 
-                    <p class="flex-item-nobottom secondary">Sugar-milk glaze</p>
-                    <p class="flex-item-nobottom secondary">$5.00</p>
-                    <p class="flex-item-nobottom secondary">1 roll</p>
-                    <div class="flex-container-nomargin">
-                        <p class="flex-item link">✏️Edit</p>
-                        <p class="flex-item link">🗑Remove</p>
-                    </div>
-                </div> 
-            </div>
-            <div class="flex-container-nomargin">
-                <img class="flex-item img-cart" src="images/Menu/caramel_pecan.png" alt="Original flavor cinnamon roll photo.">
-                <div>
-                    <p class="flex-item-nobottom body-bold">Caramel pecan</p> 
-                    <p class="flex-item-nobottom secondary">Double-chocolate glaze</p>
-                    <p class="flex-item-nobottom secondary">$5.00</p>
-                    <p class="flex-item-nobottom secondary">1 roll</p>
-                    <div class="flex-container-nomargin">
-                        <p class="flex-item link">✏️Edit</p>
-                        <p class="flex-item link">🗑Remove</p>
-                    </div>
-                </div> 
-            </div>
         </div>
 
     </body>
