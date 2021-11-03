@@ -215,7 +215,8 @@ select {
 }
 
 .logo {
-    max-width: 64px;
+    height: auto;
+    max-width: 150px;
     padding: 1em;
 }
 
