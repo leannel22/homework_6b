@@ -68,7 +68,7 @@ function loadCart() {
     for (let elem of cart) {
         console.log(elem);
         let cartItem = 
-        `<a href="product_details.html" id="cartItem${cartIndex}">
+        `<div id="cartItem${cartIndex}">
             <div class="flex-container-nomargin">
                 <img class="flex-item img-cart" src="${elem.photo}">
                 <div>
@@ -78,32 +78,66 @@ function loadCart() {
                     <p class="flex-item-nobottom secondary">${elem.count} rolls</p>
                     <div class="flex-container-nomargin">
                         <p class="flex-item link">✏️Edit</p>
-                        <p class="flex-item link" onclick="remove_item()">🗑Remove</p>
                     </div>
                 </div> 
+
+                <div>
+                    <p class="flex-item link" onclick="remove_item(${cartIndex})">🗑Remove</p>
+                </div>
             </div>
-        </a> `
+        </div> `
         cartIndex += 1;
         allCartItems = allCartItems + cartItem;
     }
     document.getElementById("allCartItems").insertAdjacentHTML("beforeend", allCartItems);
     // console.log(allCartItems);
+
+    // <p class="flex-item link" onclick="remove_item(${cartIndex})">🗑Remove</p>
 }
 
-function remove_item(){
-    
+function remove_item(cartIndex){
+    console.log(cartIndex);
+
     // UNDER CONSTRUCTION
     // Parse cart
     let cart = localStorage.getItem("shopping_cart");
     cart = JSON.parse(cart);
-    // Update cart
-    cart.push(cart_item);
+    console.log(cart);
+
+    // Update cart: remove last cart item
+    // Find the right index? the same one that was clicked.
+    // Then remove the item
+    delete cart[cartIndex];
+    console.log(cart);
+
+    // // My workaround by turning things into strings
+    // let updatedCart = "";
+    // for (let i=0; i<cart.length;i++) {
+    //     console.log(cart[i]);
+    //     temp = JSON.stringify(cart[i]);
+    //     if (temp && i!=cart.length-1) {
+    //         updatedCart = updatedCart + temp + ",";
+    //     } else if (temp && i==cart.length-1){
+    //         updatedCart = updatedCart + temp;
+    //     }
+    // }
+
+    // if (updatedCart[updatedCart.length-2]=== ',') {
+    //     updatedCart = updatedCart
+    // }
+
+    // updatedCart = "[" + updatedCart + "]";
+    // console.log(updatedCart);
+    // console.log(updatedCart[updatedCart.length-2]);
+
     // Put it into string and set to localStorage
     cart = JSON.stringify(cart);
+    // cart = updatedCart;
     localStorage.setItem("shopping_cart",cart);
 
-    // Update HTML
-    document.getElementById('cartIndex').remove();
+
+    // Removes cart item in shopping cart webpage (frontend)
+    document.getElementById('cartItem'+cartIndex).remove();
 }
 
 function totalItemCount(){
