@@ -107,7 +107,7 @@ function remove_item(cartIndex){
     // Update cart: remove last cart item
     // Find the right index? the same one that was clicked.
     // Then remove the item
-    delete cart[cartIndex];
+    cart.splice(cartIndex, 1)
     console.log(cart);
 
     // // My workaround by turning things into strings
