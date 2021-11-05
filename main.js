@@ -98,43 +98,18 @@ function loadCart() {
 function remove_item(cartIndex){
     console.log(cartIndex);
 
-    // UNDER CONSTRUCTION
     // Parse cart
     let cart = localStorage.getItem("shopping_cart");
     cart = JSON.parse(cart);
     console.log(cart);
 
     // Update cart: remove last cart item
-    // Find the right index? the same one that was clicked.
-    // Then remove the item
     cart.splice(cartIndex, 1)
     console.log(cart);
 
-    // // My workaround by turning things into strings
-    // let updatedCart = "";
-    // for (let i=0; i<cart.length;i++) {
-    //     console.log(cart[i]);
-    //     temp = JSON.stringify(cart[i]);
-    //     if (temp && i!=cart.length-1) {
-    //         updatedCart = updatedCart + temp + ",";
-    //     } else if (temp && i==cart.length-1){
-    //         updatedCart = updatedCart + temp;
-    //     }
-    // }
-
-    // if (updatedCart[updatedCart.length-2]=== ',') {
-    //     updatedCart = updatedCart
-    // }
-
-    // updatedCart = "[" + updatedCart + "]";
-    // console.log(updatedCart);
-    // console.log(updatedCart[updatedCart.length-2]);
-
     // Put it into string and set to localStorage
     cart = JSON.stringify(cart);
-    // cart = updatedCart;
     localStorage.setItem("shopping_cart",cart);
-
 
     // Removes cart item in shopping cart webpage (frontend)
     document.getElementById('cartItem'+cartIndex).remove();
