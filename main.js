@@ -57,6 +57,17 @@ function check_cart() {
     }
 }
 
+function showTotalItems(totalItemCount){
+    if (totalItemCount==1) {
+        document.getElementById("totalItemCount").textContent = " 1 item in cart🧁";
+    } else {
+        document.getElementById("totalItemCount").textContent = totalItemCount + " items in cart🧁";
+    }
+}
+
+function costCalculator(totalItemCount){
+    document.getElementById("totalCost").textContent = "$" + totalItemCount*5 + ".00";
+}
 
 function loadCart() {
     // go through all items in cart localstorage
@@ -93,6 +104,10 @@ function loadCart() {
     // console.log(allCartItems);
 
     // <p class="flex-item link" onclick="remove_item(${cartIndex})">🗑Remove</p>
+    totalItemCount = cart.length;
+    console.log(totalItemCount);
+    showTotalItems(totalItemCount);
+    costCalculator(totalItemCount);
 }
 
 function remove_item(cartIndex){
@@ -106,6 +121,7 @@ function remove_item(cartIndex){
     // Update cart: remove last cart item
     cart.splice(cartIndex, 1)
     console.log(cart);
+    totalItemCount = cart.length;
 
     // Put it into string and set to localStorage
     cart = JSON.stringify(cart);
@@ -113,8 +129,7 @@ function remove_item(cartIndex){
 
     // Removes cart item in shopping cart webpage (frontend)
     document.getElementById('cartItem'+cartIndex).remove();
-}
-
-function totalItemCount(){
-    document.getElementById("totalItemCount").textContent = "items in cart🧁";
+    showTotalItems(totalItemCount);
+    costCalculator(totalItemCount);
+    
 }
