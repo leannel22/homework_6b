@@ -65,8 +65,16 @@ function showTotalItems(totalItemCount){
     }
 }
 
-function costCalculator(totalItemCount){
-    document.getElementById("totalCost").textContent = "$" + totalItemCount*5 + ".00";
+function costCalculator(){
+    let cart = localStorage.getItem("shopping_cart");
+    cart = JSON.parse(cart);
+    let sum = 0;
+    for (let elem of cart) {
+        let current = elem.count*5.00;
+        sum = sum + current;
+    }
+
+    document.getElementById("totalCost").textContent = "$" + sum + ".00";
 }
 
 function loadCart() {
@@ -85,20 +93,22 @@ function loadCart() {
                 <div>
                     <p class="flex-item-nobottom body-bold">${elem.name}</p>
                     <p class="flex-item-nobottom secondary">${elem.glaze} glaze</p>
-                    <p class="flex-item-nobottom secondary">$5.00</p>
+                    <p class="flex-item-nobottom secondary">$ ${elem.count*5.00}</p>
                     <p class="flex-item-nobottom secondary">${elem.count} rolls</p>
-                    <div class="flex-container-nomargin">
-                        <p class="flex-item link">✏️Edit</p>
-                    </div>
+ 
                 </div> 
 
                 <div>
-                    <p class="flex-item link" onclick="remove_item(${cartIndex})">🗑Remove</p>
+                    <p class="flex-item-nobottom link" onclick="remove_item(${cartIndex})">🗑Remove</p>
                 </div>
             </div>
         </div> `
         cartIndex += 1;
         allCartItems = allCartItems + cartItem;
+
+        // <div class="flex-container-nomargin">
+        //     <p class="flex-item link">✏️Edit</p>
+        // </div>
     }
     document.getElementById("allCartItems").insertAdjacentHTML("beforeend", allCartItems);
     // console.log(allCartItems);
@@ -107,7 +117,7 @@ function loadCart() {
     totalItemCount = cart.length;
     console.log(totalItemCount);
     showTotalItems(totalItemCount);
-    costCalculator(totalItemCount);
+    costCalculator();
 }
 
 function remove_item(cartIndex){
