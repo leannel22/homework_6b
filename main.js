@@ -97,7 +97,6 @@ function loadCart() {
                     <p class="flex-item-nobottom secondary">${elem.glaze} glaze</p>
                     <p class="flex-item-nobottom secondary">${elem.count} rolls</p>
                     <p class="flex-item-nobottom secondary">$${elem.count*5.00}.00 ($5.00 x ${elem.count*5.00} rolls)</p>
- 
                 </div> 
 
                 <div>
