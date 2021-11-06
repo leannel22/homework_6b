@@ -57,6 +57,7 @@ function check_cart() {
     }
 }
 
+// Shows how many items are in the shopping cart
 function showTotalItems(totalItemCount){
     if (totalItemCount==1) {
         document.getElementById("totalItemCount").textContent = " 1 item in cart🧁";
@@ -65,6 +66,7 @@ function showTotalItems(totalItemCount){
     }
 }
 
+// Calculates cost of the whole shopping cart
 function costCalculator(){
     let cart = localStorage.getItem("shopping_cart");
     cart = JSON.parse(cart);
@@ -93,8 +95,8 @@ function loadCart() {
                 <div>
                     <p class="flex-item-nobottom body-bold">${elem.name}</p>
                     <p class="flex-item-nobottom secondary">${elem.glaze} glaze</p>
-                    <p class="flex-item-nobottom secondary">$ ${elem.count*5.00}</p>
                     <p class="flex-item-nobottom secondary">${elem.count} rolls</p>
+                    <p class="flex-item-nobottom secondary">$${elem.count*5.00}.00 ($5.00 x ${elem.count*5.00} rolls)</p>
  
                 </div> 
 
@@ -105,15 +107,10 @@ function loadCart() {
         </div> `
         cartIndex += 1;
         allCartItems = allCartItems + cartItem;
-
-        // <div class="flex-container-nomargin">
-        //     <p class="flex-item link">✏️Edit</p>
-        // </div>
     }
     document.getElementById("allCartItems").insertAdjacentHTML("beforeend", allCartItems);
-    // console.log(allCartItems);
 
-    // <p class="flex-item link" onclick="remove_item(${cartIndex})">🗑Remove</p>
+    // console.log(allCartItems);
     totalItemCount = cart.length;
     console.log(totalItemCount);
     showTotalItems(totalItemCount);
